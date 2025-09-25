@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/juandavimedina/test-app-k8.git # Repository URL
     targetRevision: develop
-    path: .
+    path: develop
   destination:
     server: https://kubernetes.default.svc # Kubernetes cluster server
     namespace: myapp
