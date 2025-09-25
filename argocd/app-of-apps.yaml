@@ -11,7 +11,7 @@ spec:
 
   source:
     repoURL: https://github.com/juandavimedina/test-app-k8.git
-    targetRevision: main
+    targetRevision: develop
     path: argocd
 
   destination:
