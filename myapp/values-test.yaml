@@ -1,0 +1,18 @@
+# Configuración específica para el entorno de TEST
+
+app:
+  name: myapp-test
+  image:
+    tag: "0.1.0"
+
+deployment:
+  replicas: 1
+
+service:
+  name: myapp-test-service
+
+env:
+  - name: ENV
+    value: "test"
+  - name: PORT
+    value: "8080"

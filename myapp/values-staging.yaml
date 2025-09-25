@@ -1,0 +1,18 @@
+# Configuración específica para el entorno de STAGING
+
+app:
+  name: myapp-staging
+  image:
+    tag: "0.1.0"
+
+deployment:
+  replicas: 3
+
+service:
+  name: myapp-staging-service
+
+env:
+  - name: ENV
+    value: "staging"
+  - name: PORT
+    value: "8080"

@@ -1,0 +1,32 @@
+# Configuración por defecto para MyApp
+
+# Configuración de la aplicación
+app:
+  name: myapp
+  image:
+    repository: djmedinapkvelostics/test-1
+    tag: "0.1.0"
+    pullPolicy: IfNotPresent
+
+# Configuración del deployment
+deployment:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+
+# Configuración del servicio
+service:
+  enabled: true
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
+
+# Variables de entorno
+env:
+  - name: ENV
+    value: "development"
+  - name: PORT
+    value: "8080"
