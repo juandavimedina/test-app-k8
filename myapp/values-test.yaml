@@ -6,7 +6,7 @@ app:
     tag: "0.1.0"
 
 deployment:
-  replicas: 2
+  replicas: 5
 
 service:
   name: myapp-test-service
