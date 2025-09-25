@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp-argo-application
+  namespace: argocd
+spec:
+  project: default # Project name
+
+  source:
+    repoURL: https://github.com/juandavimedina/test-app-dockerhub.git # Repository URL
+    targetRevision: HEAD
+    path: develop
+  destination:
+    server: https://kubernetes.default.svc # Kubernetes cluster server
+    namespace: myapp
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true # Create the namespace if it doesn't exist
+
+    automated:
+      selfHeal: true # Reapply the resource if it doesn't match the desired state
+      prune: true # Remove resources that are no longer needed
+
+#argo pulls git repositopry changes every 3 minutes
+#if we want to reduce the time, we need to configure a git webhook
