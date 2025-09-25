@@ -24,6 +24,6 @@ spec:
       - PruneLast=true
 
     automated:
-      selfHeal: true
+      selfHeal: false
       prune: true
   revisionHistoryLimit: 10
