@@ -3,10 +3,10 @@
 app:
   name: myapp-test
   image:
-    tag: "0.1.0"
+    tag: "0.1.1"
 
 deployment:
-  replicas: 1
+  replicas: 2
 
 service:
   name: myapp-test-service
