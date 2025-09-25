@@ -7,7 +7,7 @@ spec:
   project: default # Project name
 
   source:
-    repoURL: https://github.com/juandavimedina/test-app-dockerhub.git # Repository URL
+    repoURL: https://github.com/juandavimedina/test-app-k8.git # Repository URL
     targetRevision: HEAD
     path: develop
   destination:
